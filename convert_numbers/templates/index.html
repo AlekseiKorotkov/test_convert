@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Калькулятор</title>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class ='block'>
+            <h1>Convert roman numbers to arabic or arabic to roman </h1>
+            <form name="form" method="post" id="test"}>
+                {% csrf_token %}
+
+            <p><input type="text" class = 'textarea' id = "numberField"> </p>
+            <p><input type="submit" class ='btn' value="Сonvert"  > </p>
+            <p><input type="text" class = 'textarea' id = 'result_convert'> </p>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>
